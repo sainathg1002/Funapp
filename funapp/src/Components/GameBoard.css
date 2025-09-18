@@ -1,0 +1,29 @@
+ .game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 15px;
+  background-color: #11d342;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+} 
+
+
+
+/* src/components/GameBoard.css */
+
+
+
+/* Optional: Add a subtle board-wide animation */
+.game-board.celebrating {
+  animation: pulse-glow 1.5s ease-in-out forwards;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 10px 5px #61dafb; }
+  50% { box-shadow: 0 0 20px 10px #61dafb; }
+  100% { box-shadow: 0 0 10px 5px #61dafb; }
+}
+
