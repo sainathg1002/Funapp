@@ -1,0 +1,109 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #555;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:not(.revealed):hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.card.revealed {
+  background-color: #61dafb;
+  color: #3e3950;
+  cursor: default;
+  transform: scale(1);
+} */
+
+
+
+/* src/components/Card.css */
+
+.card {
+  
+  transition: transform 0.28s ease, background-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.card:not(.revealed):hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+
+.card.revealed {
+  background-color: #fff9f0; 
+  color: #23395b; 
+  cursor: default;
+  box-shadow: 0 8px 18px rgba(35,57,91,0.08);
+}
+
+
+.card.error {
+  animation: shake 0.56s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  border: 2px solid rgba(237, 85, 101, 0.9);
+  background-color: #fff1f2; 
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+*/
+
+/* src/components/Card.css 
+
+
+.card.celebrating {
+  animation: celebration-pop 1.5s ease-out forwards;
+}
+
+@keyframes celebration-pop {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Ensure the cards don't have hover effects while celebrating */
+.card.celebrating:hover {
+  transform: scale(1);
+}
+
+.card.revealed {
+  background-color: #61dafb; /* A distinct color to show it's selected */
+  color: #282c34;
+  cursor: default;
+  transform: scale(1);
+}
