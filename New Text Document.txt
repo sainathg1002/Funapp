@@ -1,0 +1,1 @@
+no not this prototype, i want to develop player first selcet the html card after css after js in sequential .there is no other same cards at 3*3,all cards are unique and all are sequentially connected ,the player should pick defeanetly html after css after js
